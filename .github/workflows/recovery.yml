@@ -54,8 +54,8 @@ jobs:
          run: |
              mkdir work
              cd work
-             repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
-             repo sync -j4
+             repo init -u $MANIFEST -b $MANIFEST_BRANCH
+             repo sync
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
              
        - name: Build
